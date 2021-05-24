@@ -40,4 +40,5 @@ fields:
   description: Enter hero image for blog post here
   default: "/content/images/sarah-dorweiler-9Z1KRIfpBTM-unsplash.jpg"
 pages:
+- content/posts/wat-is-ninjs-salary.md
 - content/posts/what-is-jamstack.md
