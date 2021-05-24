@@ -19,9 +19,18 @@ fields:
   label: author
   description: Enter author of post
 - name: tags
-  type: list
-  default: []
-  label: Tags
+  type: select
+  default: ''
+  config:
+    required: true
+    options: []
+    source:
+      type: documents
+      section: author-list
+      file: content/data/tags.yaml
+      path: tags
+  label: tags
+  description: Enter tag of post
 - name: date
   type: datetime
   label: date
