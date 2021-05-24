@@ -46,7 +46,7 @@ export default function Blog(props) {
   }
 
   return (
-    <Layout title={`WebJayant >> ${data.frontmatter.title}`} description={data.excerpt} image={data.frontmatter.hero_image.childImageSharp.fluid.src} type='article'>
+    <Layout title={`NinjaSalary >> ${data.frontmatter.title}`} description={data.excerpt} image={data.frontmatter.hero_image.childImageSharp.fluid.src} type='article'>
       <article className={`BlogArea ${blogTemplateStyles.blog}`}>
         <div className={blogTemplateStyles.blog__info}>
           <h3>{data.frontmatter.date} / {data.frontmatter.author}</h3>
@@ -64,14 +64,14 @@ export default function Blog(props) {
         ></div>
         <div className={blogTemplateStyles.blog__footer}>
           {(previousSlug !== '')
-          ?<Link to={`/blog/${previousSlug.fields.slug}`} className={blogTemplateStyles.footer__previous}>
+          ?<Link to={`/${previousSlug.fields.slug}`} className={blogTemplateStyles.footer__previous}>
             <FontAwesomeIcon icon={faAngleDoubleLeft} />
             <span>{previousSlug.frontmatter.title}</span>
           </Link>
           :<div></div>
           }
           {(nextSlug !== '')
-          ?<Link to={`/blog/${nextSlug.fields.slug}`} className={blogTemplateStyles.footer__next}>
+          ?<Link to={`/${nextSlug.fields.slug}`} className={blogTemplateStyles.footer__next}>
             <span>{nextSlug.frontmatter.title}</span>
             <FontAwesomeIcon icon={faAngleDoubleRight} />
           </Link>

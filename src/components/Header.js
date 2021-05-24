@@ -18,26 +18,8 @@ export default function Header(props) {
       let tl = new TimelineMax()
       let headerShadow = tl.to(headerItem, 0.3,{
         'box-shadow':'0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3)',
-        'background': 'red',
+        'background': '#2e2a5a',
         'color':'#fff'
-      }).to(mainLogo, 0.3, {
-        'color':'#fff',
-        delay: -0.3
-      }).to(logoEnglish, 0.3, {
-        'color':'#2d0f0f',
-        delay: -0.3
-      }).to(leftLinks, 0.3,{
-        'color':'#fff',
-        delay: -0.3
-      }).to(logoLeft, 0.3, {
-        'fill':'#fff',
-        delay: -0.3
-      }).to(logoRight, 0.3, {
-        'fill':'#fff',
-        delay: -0.3
-      }).to(logoMed, 0.3, {
-        'fill':'#fff',
-        delay: -0.3
       })
       new ScrollMagic.Scene({
         triggerElement: '.BlogArea',
