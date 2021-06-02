@@ -11,7 +11,7 @@ config.autoAddCss = false;
 
 export default function Layout(props) {
   const { title, description } = useSiteMetadata()
-  const imageUrl = `https://webjayant.com${props.image || image}`
+  const imageUrl = `https://blog.ninjasalary.com${props.image || image}`
   return (
     <section
       className={`${layoutStyles.layout} ${
@@ -33,6 +33,9 @@ export default function Layout(props) {
         <meta property="twitter:card" content='summary_large_image' />
         <meta property="twitter:description" content={props.description || description} />
         <meta name="twitter:image" content={imageUrl} />
+        <link rel="shortcut icon" type="image/x-icon" href="https://ninjasalary.com/img/favicon.png"></link>
+        <link href="https://ninjasalary.com/css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
       </Helmet>
       <Header page={props.page} title={title} />
       <div className={layoutStyles.content}>{props.children}</div>

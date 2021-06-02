@@ -1,17 +1,21 @@
 @import "../variables";
-.maindiv{
-    height:calc(100vh - 50px);
+#about{
+    height:auto;
+    max-height: 100vh;
     background: $dark;
     display: flex;
     padding: 30px;
 }
 .text__display__area{
-    font-family: 'Barlow Condensed', sans-serif;
     margin:auto;
     color:#fff;
     font-size: 50px;
     span{
         color:$light
+    }
+    p{
+        font-size: 20px;
+        color: #fff;
     }
     .social__display__area{
         a{

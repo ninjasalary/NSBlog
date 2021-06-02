@@ -20,13 +20,13 @@ fields:
   description: Enter author of post
 - name: tags
   type: select
-  default: ''
+  default: 'Blog'
   config:
     required: true
     options: []
     source:
       type: documents
-      section: author-list
+      section: tag-list
       file: content/data/tags.yaml
       path: tags
   label: tags

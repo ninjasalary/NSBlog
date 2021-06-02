@@ -11,6 +11,7 @@ export default function useBlogData() {
               date(formatString: "MMMM Do, YYYY")
               author
               title
+              tags
               hero_image {
                 childImageSharp {
                   fluid( maxWidth: 800 ) {
@@ -19,7 +20,7 @@ export default function useBlogData() {
                 }
               }
             }
-            excerpt(pruneLength: 200)
+            excerpt(pruneLength: 100)
             fields {
               slug
             }

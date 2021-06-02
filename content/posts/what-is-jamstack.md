@@ -3,7 +3,7 @@ date: 2020-08-31T18:03:21+05:30
 hero_image: "/content/images/jamstack-delivers-v1.jpeg"
 title: What is JAMstack?
 author: Jayant Raj Singh
-
+tags: Blog
 ---
 **What is JAMstack and why should I care?**
 

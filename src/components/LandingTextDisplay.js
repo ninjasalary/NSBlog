@@ -4,21 +4,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faLinkedin, faInstagram, faTwitter, faStackOverflow, faCodepen, faDev, faAngellist, faGithub } from '@fortawesome/free-brands-svg-icons'
 export default function LandingTextDisplay(props) {
     return (
-        <div className={`${landingStyles.text__display__area} ${(props.style)?props.style:''}`}>
-            <div>Hi,</div>
-            <div>I'm <span>Jayant</span>,</div>
-            <div>Web Developer.</div>
-            <div className={landingStyles.social__display__area}>
-                <a href="https://www.facebook.com/webguyjayant" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebook} /></a>
-                <a href="https://www.linkedin.com/in/webguyjayant/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a>
-                <a href="https://www.instagram.com/webjayant/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
-                <a href="https://twitter.com/webjayant" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faTwitter} /></a>
-                <a href="https://stackoverflow.com/users/6890449/webjayant" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faStackOverflow} /></a>
-                <a href="https://codepen.io/webjayant" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faCodepen} /></a>
-                <a href="https://dev.to/webjayant" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faDev} /></a>
-                <a href="https://angel.co/u/webjayant" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faAngellist} /></a>
-                <a href="https://github.com/webjayant" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
+        <section className="banner-area bg-light" id="about">
+    <div className="container">
+      <div className="row align-items-center">
+        <div className="col-lg-5 col-md-6 col-sm-12">
+          <div className="banner-content">
+            <div className="banner-title b-title">
+              <h1 className="wow fadeInLeft  animated" data-wow-delay=".5s" >
+                Withdraw your salary anytime
+              </h1>
+              <p>
+                Access a portion of your earned salary whenever you need it. We integrate with employers to provide a seamless experience.
+              </p>
             </div>
+          </div>
         </div>
+        <div className="col-lg-7 col-md-6">
+          <div className="m-right3 wow fadeInRight  d-none d-md-block animated" >
+            <img src="https://ninjasalary.com/img/banner/ba-2.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
     )
 }

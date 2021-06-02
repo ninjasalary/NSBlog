@@ -6,9 +6,8 @@ import landingStyles from "../styles/components/landing.module.scss"
 export default function NotFound() {
     return (
         <div>
-            <div className={landingStyles.maindiv}>
+            <div>
                 <LandingTextDisplay/>
-                <LandingImageArea/>
             </div>
             <BlogList />
         </div>

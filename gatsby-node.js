@@ -44,4 +44,32 @@ module.exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  const tagTemplates = path.resolve("./src/templates/tags.js")
+  //get slugs
+  const tagResp = await graphql(`
+  query {
+    allMarkdownRemark{
+      edges {
+        node {
+          frontmatter {
+            tags
+          }
+        }
+      }
+    }
+  }
+  `)
+  //create new pages with unique slug
+  tagResp.data.allMarkdownRemark.edges.forEach(edge => {
+    if(edge.node.frontmatter.tags){
+      createPage({
+        component: tagTemplates,
+        path: `/${edge.node.frontmatter.tags}`.toLowerCase(),
+        context: {
+          tags: edge.node.frontmatter.tags,
+        },
+      })
+    }
+  })
 }

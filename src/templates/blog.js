@@ -49,7 +49,7 @@ export default function Blog(props) {
     <Layout title={`NinjaSalary >> ${data.frontmatter.title}`} description={data.excerpt} image={data.frontmatter.hero_image.childImageSharp.fluid.src} type='article'>
       <article className={`BlogArea ${blogTemplateStyles.blog}`}>
         <div className={blogTemplateStyles.blog__info}>
-          <h3>{data.frontmatter.date} / {data.frontmatter.author}</h3>
+          <h3>{data.frontmatter.date} / {data.frontmatter.tags || 'blog'} / {data.frontmatter.author}</h3>
           <h1>{data.frontmatter.title}</h1>
         </div>
         <figure className={blogTemplateStyles.blog__hero}>
@@ -94,6 +94,7 @@ export const getPostData = graphql`
       frontmatter {
         title
         author
+        tags
         date(formatString: "MMMM Do, YYYY")
         hero_image {
           childImageSharp {
